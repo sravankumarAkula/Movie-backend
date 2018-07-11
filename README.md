@@ -2,7 +2,9 @@
 
 ## Screenshots :
 ```
-https://github.com/sravankumarAkula/SuperGroupAssignment-backend/wiki
+<a href="https://github.com/sravankumarAkula/SuperGroupAssignment-backend/wiki">wiki</a>
+
+
 ```
 ## Video
 ```
