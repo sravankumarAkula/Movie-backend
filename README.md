@@ -73,7 +73,7 @@ Project Frontend built in Angular
 https://github.com/sravankumarAkula/SuperGroupAssignment-frontend.git
 ```
 
-2. Open index.html in chrome
+2. Deploy the app
 
 3. Login Details : 
 ```
