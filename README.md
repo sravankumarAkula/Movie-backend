@@ -3,12 +3,13 @@
 Projects exposes rest services to be consumed by front end angular app.
 
 ## Available API
-
+```
 REST API:
 1. POST /postMovie
 2. PUT /putMovie
 3. GET /getMovies
 4. DELETE /deleteMovie?id={id}
+```
 
 ### architecture
 
@@ -24,12 +25,12 @@ Project backend built in Spring boot, JDBC, MYSQL , Mockito , Maven
 ## Steps
 
 1. Clone the application
-
+```
 https://github.com/sravankumarAkula/SuperGroupAssignment-backend.git
+```
 
 2. Create tables in Database
-
-
+```
 CREATE TABLE Movies (
     ID int NOT NULL AUTO_INCREMENT,
     name varchar(255) NOT NULL,
@@ -38,6 +39,7 @@ CREATE TABLE Movies (
     budget varchar(255) NOT NULL,
     PRIMARY KEY (ID)
 );
+```
 
 3. Update mysql host, username, password in DBConnection.java (Source Packages -> com.movies.dbconnection)
 
@@ -55,17 +57,20 @@ front end UI built in angular and consumes the rest api using ajax
 
 Project Frontend built in Angular
 
-
 ## Steps
 
 1. Clone the application
+```
 https://github.com/sravankumarAkula/SuperGroupAssignment-frontend.git
+```
 
 2. Open index.html in chrome
 
 3. Login Details : 
+```
   username : admin
   password : pass
+```
   
 4. Once logged in, you can access the application.  
 
