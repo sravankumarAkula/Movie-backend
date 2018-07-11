@@ -6,6 +6,7 @@ import com.movies.pojos.Movie;
 import com.movies.pojos.ProcessingResult;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
     
+    @Autowired
+    private ProcessOperations processOperations;
+
+    public ProcessOperations getProcessOperations() {
+        return processOperations;
+    }
+
+    public void setProcessOperations(ProcessOperations processOperations) {
+        this.processOperations = processOperations;
+    }
+    
+    
+    
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     @ResponseBody
     public String home(){
@@ -30,7 +44,7 @@ public class HomeController {
     @CrossOrigin(origins = "http://localhost:8084")
     @RequestMapping(value = "/postMovie", method = RequestMethod.POST)
     @ResponseBody
-    public ProcessingResult postMovie(@RequestBody Map<String, Object> payload){
+    public int postMovie(@RequestBody Map<String, Object> payload){
         ProcessingResult processingResult = new ProcessingResult();
         System.out.println(payload);
         Movie movie = new Movie();
@@ -39,52 +53,53 @@ public class HomeController {
         movie.setGenre(payload.get("genre").toString());
         movie.setBudget(payload.get("budget").toString());
         try{
-            boolean isPosted = ProcessOperations.postMovie(movie);  
+            //ProcessOperations processOperations = new ProcessOperations();
+            boolean isPosted = processOperations.postMovie(movie);  
             System.out.println("isPosted " + isPosted);
             if(isPosted){
-                processingResult.setResult("success");
-                processingResult.setDevloperMessage("success");
+                return 1;
+            }else{
+                return 0;
             }
         }catch(Exception ex){
             ex.printStackTrace();
-            processingResult.setResult("error");
-            processingResult.setDevloperMessage("error");
         }
-        return processingResult;
+        return 0;
     }
     
     @CrossOrigin(origins = "http://localhost:8084")
     @RequestMapping(value = "/getMovies", method = RequestMethod.GET)
     @ResponseBody
     public List<Movie> getMovie(){
-        return ProcessOperations.getMovies();
+        //ProcessOperations processOperations = new ProcessOperations();
+        return processOperations.getMovies();
     }
     
     @CrossOrigin(origins = "http://localhost:8084")
     @RequestMapping(value = "/deleteMovie", method = RequestMethod.DELETE)
     @ResponseBody
-    public ProcessingResult deleteMovie(@RequestParam(value="id", required=true) String id){
+    public int deleteMovie(@RequestParam(value="id", required=true) String id){
         ProcessingResult processingResult = new ProcessingResult();
         System.out.println("id to delete " + id);
         try{
-            boolean isDeleted = ProcessOperations.deleteMovie(id);  
+            //ProcessOperations processOperations = new ProcessOperations();
+            boolean isDeleted = processOperations.deleteMovie(id);  
             System.out.println("is deleted " + isDeleted);
             if(isDeleted){
-                processingResult.setResult("success");
-                processingResult.setDevloperMessage("success");
+                return 1;
+            }else{
+                return 0;
             }
         }catch(Exception ex){
             ex.printStackTrace();
-            processingResult.setResult("error");
-            processingResult.setDevloperMessage("error");
         }
-        return processingResult;
+        return 0;
     }
     
     @CrossOrigin(origins = "http://localhost:8084")
     @RequestMapping(value = "/putMovie", method = RequestMethod.PUT)
     @ResponseBody
-    public ProcessingResult putMovie(@RequestBody Map<String, Object> payload){
+    public int putMovie(@RequestBody Map<String, Object> payload){
         ProcessingResult processingResult = new ProcessingResult();
         System.out.println(payload);
         Movie movie = new Movie();
@@ -94,18 +109,18 @@ public class HomeController {
         movie.setGenre(payload.get("genre").toString());
         movie.setBudget(payload.get("budget").toString());
         try{
-            boolean isUpdated = ProcessOperations.putMovie(movie);  
+            //ProcessOperations processOperations = new ProcessOperations();
+            boolean isUpdated = processOperations.putMovie(movie);  
             System.out.println("is udpated " + isUpdated);
             if(isUpdated){
-                processingResult.setResult("success");
-                processingResult.setDevloperMessage("success");
+                return 1;
+            }else{
+                return 0;
             }
         }catch(Exception ex){
             ex.printStackTrace();
-            processingResult.setResult("error");
-            processingResult.setDevloperMessage("error");
         }
-        return processingResult;
+        return 0;
     }
     
 }

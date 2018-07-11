@@ -9,11 +9,13 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class ProcessOperations {
 
-    public static boolean postMovie(Movie movie) {
+    public  boolean postMovie(Movie movie) {
         System.out.println("in process ");
         /* DATABASE CONNECTION START */
         Connection con = DBConnection.getConnection();
@@ -41,7 +43,7 @@ public class ProcessOperations {
     }
     
     
-    public static List getMovies(){
+    public  List getMovies(){
         List<Movie> movies = new ArrayList<Movie>();
         System.out.println("in process ");
         /* DATABASE CONNECTION START */
@@ -70,7 +72,7 @@ public class ProcessOperations {
         return null;
     }
     
-    public static boolean deleteMovie(String id){
+    public  boolean deleteMovie(String id){
         System.out.println("in process ");
         /* DATABASE CONNECTION START */
         Connection con = DBConnection.getConnection();
@@ -93,7 +95,7 @@ public class ProcessOperations {
         return false;
     }
     
-    public static boolean putMovie(Movie movie) {
+    public  boolean putMovie(Movie movie) {
         System.out.println("in process ");
         /* DATABASE CONNECTION START */
         Connection con = DBConnection.getConnection();

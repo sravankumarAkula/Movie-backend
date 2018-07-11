@@ -16,7 +16,7 @@ public class Movie {
     private String directorName;
     private String genre;
     private String budget;
-    
+
     public int getId() {
         return id;
     }
@@ -24,7 +24,7 @@ public class Movie {
     public void setId(int id) {
         this.id = id;
     }
-
+    
     
     
     public String getMovieName() {
@@ -61,7 +61,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" + "id=" + id + ", movieName=" + movieName + ", directorName=" + directorName + ", genre=" + genre + ", budget=" + budget + '}';
+        return "Movie{movieName=" + movieName + ", directorName=" + directorName + ", genre=" + genre + ", budget=" + budget + '}';
     }
     
 }
