@@ -58,17 +58,16 @@ Project Frontend built in Angular
 
 ## Steps
 
-Steps :
-1.Clone the application
+1. Clone the application
 https://github.com/sravankumarAkula/SuperGroupAssignment-frontend.git
 
-2.Open index.html in chrome
+2. Open index.html in chrome
 
-3.Login Details : 
+3. Login Details : 
   username : admin
   password : pass
   
-4.Once logged in, you can access the application.  
+4. Once logged in, you can access the application.  
 
 
 
