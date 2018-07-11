@@ -1,13 +1,30 @@
-SuperGroupAssignment-backend 
+# SuperGroupAssignment - Backend
+
+Projects exposes rest services to be consumed by front end angular app.
+
+## Available API
+
+REST API:
+1. POST /postMovie
+2. PUT /putMovie
+3. GET /getMovies
+4. DELETE /deleteMovie?id={id}
+
+### architecture
+
 Project backend built in Spring boot, JDBC, MYSQL , Mockito , Maven
 
-Requirments
-Java 1.8
-Maven
-mySql
+### Prerequisites
+1. Java 8
+2. IDE
+3. MYSQL
+4. Maven
+5. GIT
 
-Steps :
+## Steps
+
 1. Clone the application
+
 https://github.com/sravankumarAkula/SuperGroupAssignment-backend.git
 
 2. Create tables in Database
@@ -29,14 +46,18 @@ CREATE TABLE Movies (
 5.project runs at http://localhost:8080
 
 
-REST API:
-1. POST /postMovie
-2. PUT /putMovie
-3. GET /getMovies
-4. DELETE /deleteMovie?id={id}
+### Break down into end to end tests
 
-SuperGroupAssignment - frontend
-Built in Angular
+# SuperGroupAssignment - frontend
+
+front end UI built in angular and consumes the rest api using ajax
+
+### architecture
+
+Project Frontend built in Angular
+
+
+## Steps
 
 Steps :
 1.Clone the application
