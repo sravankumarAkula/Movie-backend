@@ -35,18 +35,17 @@ CREATE TABLE Movies (
     name varchar(255) NOT NULL,
     director varchar(255) NOT NULL,
     genre varchar(255) NOT NULL,
-    budget varchar(255) NOT NULL ,
+    budget varchar(255) NOT NULL,
     PRIMARY KEY (ID)
 );
 
-3.Update mysql host, username, password in DBConnection.java (Source Packages -> com.movies.dbconnection)
+3. Update mysql host, username, password in DBConnection.java (Source Packages -> com.movies.dbconnection)
 
-4.Build and run the app using ide.
+4. Build and run the app using ide.
 
-5.project runs at http://localhost:8080
+5. project runs at http://localhost:8080
 
 
-### Break down into end to end tests
 
 # SuperGroupAssignment - frontend
 
