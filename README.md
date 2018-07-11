@@ -1,5 +1,9 @@
 # SuperGroupAssignment - Backend
 
+# Screenshots :
+```
+https://github.com/sravankumarAkula/SuperGroupAssignment-backend/wiki
+```
 Projects exposes rest services to be consumed by front end angular app.
 
 ## Available API
